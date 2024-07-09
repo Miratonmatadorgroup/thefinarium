@@ -9,6 +9,7 @@ import { HiClipboardList } from "react-icons/hi";
 import { BiSupport } from "react-icons/bi";
 import { IoSettings } from "react-icons/io5";
 import { LuSearch } from "react-icons/lu";
+import {motion} from "framer-motion"
 
 export const SideBar = () => {
     return (
@@ -74,7 +75,7 @@ export const SideBar = () => {
                     />
                 </div>
 
-                <div className="flex items-center justify-between p-[1.5rem] my-3">
+                <div className="flex items-center justify-between py-[1.5rem] px-[1.7rem] my-3">
                     <div>
                         <img
                             src={"https://res.cloudinary.com/dpfqbb9pl/image/upload/v1709156022/jeqduutert9dyt5mdsya.jpg"}
@@ -83,11 +84,14 @@ export const SideBar = () => {
                         />
                     </div>
                     <p className="font-bold text-neutral-100">Lord IBE</p>
-                    <div>
+                    <motion.div
+                        whileHover={{ scale: 1.10 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
                         <LuLogOut
-                            className="text-white w-[1.5rem] font-bold"
+                            className="text-white w-[1.5rem] font-bold cursor-pointer"
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
