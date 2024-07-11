@@ -1,6 +1,6 @@
 import {SideBar} from "../../layouts/SideBar.jsx";
 import {Header} from "../../layouts/Header.jsx";
-import {Dashboard} from "./components/Dashboard.jsx";
+import {Dashboard} from "./routes/Dashboard.jsx";
 
 export const Home = () => {
     return (

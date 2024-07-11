@@ -6,6 +6,14 @@ import { LuBadgePercent } from "react-icons/lu";
 import { HiClipboardList } from "react-icons/hi";
 import { HiMiniArrowLongUp, HiMiniArrowLongDown } from "react-icons/hi2";
 import { IoIosArrowForward } from "react-icons/io";
+import {Beneficiary} from "../components/Beneficiary.jsx";
+import AC from "../../../assets/images/AC.png";
+import darkLady from "../../../assets/images/darkLady.png";
+import JW from "../../../assets/images/JW.png";
+import MM from "../../../assets/images/MM.png";
+import MS from "../../../assets/images/MS.png";
+import whitelady from "../../../assets/images/whitelady.png";
+import ZS from "../../../assets/images/ZS.png";
 
 export const Dashboard = () => {
     return (
@@ -61,9 +69,65 @@ export const Dashboard = () => {
                 </div>
             </article>
 
-            <section>
+            <section className="grid grid-cols-12 gap-5 mt-5">
+                <section className="col-span-8">
+                    <header className="flex items-center justify-between">
+                        <h2 className="text-[18px] font-[600]">Quick Send</h2>
+                        <p className="flex items-center gap-1 text-secondary font-[600] text-[11.67px]">
+                            See all beneficiaries <span className="text-secondary"><IoIosArrowForward className="text-[15px]" /></span>
+                        </p>
+                    </header>
 
+                    <section className="bg-neutral-100 mt-3 flex items-center w-full justify-between px-[15px] py-[24px] border border-neutral-light rounded-[10px]">
+                        {
+                            beneficiaries.map((beneficiary, index) => (
+                                <Beneficiary key={index} {...beneficiary} />
+                            ))
+                        }
+                    </section>
+                    <section></section>
+                </section>
+
+                <section className="col-span-4">
+                    <header className="flex items-center justify-between">
+                        <h2 className="text-[18px] font-[600]">Recent Transactions</h2>
+                        <p className="flex items-center gap-1 text-secondary font-[600] text-[11.67px]">
+                            See all <span className="text-secondary"><IoIosArrowForward className="text-[15px]" /></span>
+                        </p>
+                    </header>
+                </section>
             </section>
         </section>
-    )
+    );
 }
+
+const beneficiaries = [
+    {
+        imgUrl: darkLady,
+        name: 'Ariana Bush'
+    },
+    {
+        imgUrl: MM,
+        name: 'Madelyn Martin'
+    },
+    {
+        imgUrl: ZS,
+        name: 'Zain Siphron'
+    },
+    {
+        imgUrl: whitelady,
+        name: 'Zain Curtis'
+    },
+    {
+        imgUrl: MS,
+        name: 'Martin Stanley'
+    },
+    {
+        imgUrl: AC,
+        name: 'Aliya Cornrad'
+    },
+    {
+        imgUrl: JW,
+        name: 'Jack Westley'
+    }
+]
