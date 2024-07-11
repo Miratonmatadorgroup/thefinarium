@@ -24,8 +24,8 @@ export const Dashboard = () => {
                 </motion.button>
             </title>
 
-            <article className="mt-10 flex items-center">
-                <div className="flex items-center justify-between max-w-[501px] bg-black rounded-[10px] p-7 pr-10 grow">
+            <article className="mt-10 flex items-center justify-between">
+                <div className="flex items-center justify-between max-w-[501px] h-[152px] bg-black rounded-[10px] p-6 pr-10 grow">
                     <div className="text-[14px] grid gap-1">
                         <p className="text-neutral-150">Available Balance</p>
                         <p className="text-[32px] font-[600] text-neutral-100">
@@ -41,22 +41,29 @@ export const Dashboard = () => {
                     </div>
                 </div>
 
-                <div>
-                    <div className="text-[14px] grid gap-1">
-                        <p className="text-neutral-150">Update your KYC Information</p>
-                        <p className="text-[32px] font-[600] text-neutral-100">
-
+                <div className="relative max-w-[563px] h-[152px] bg-secondary-100 rounded-[10px] p-6 border border-secondary-200 grow">
+                    <div className="text-[14px] grid gap-1 max-w-[313px]">
+                        <p className="text-[1rem] font-[600]">Update your KYC Information</p>
+                        <p className="text-[14px] text-primary-200">
+                            Please update/verify your information before <span className="text-primary-400 font-[600]">13th July 2023</span> to unlock level benefits
                         </p>
-                        <p className="flex items-center gap-1 text-neutral-200">
-                            Payout Balance: <span className="text-neutral-150">$139,900.99</span> <FaCircleExclamation className="text-secondary" />
+                        <p className="flex items-center gap-1 text-secondary mt-2 font-[600] text-[14px]">
+                            Complete Verification <span className="text-secondary"><IoIosArrowForward className="text-[1.3rem]" /></span>
                         </p>
                     </div>
 
-                    <div>
-                        <VscEye className="text-[35px] text-neutral-150" />
+                    <div className="w-fit absolute bottom-0 right-2">
+                        <img
+                            src={"https://ik.imagekit.io/lordibe/shield-tick.png"}
+                            alt={"kyx image"}
+                        />
                     </div>
                 </div>
             </article>
+
+            <section>
+
+            </section>
         </section>
     )
 }
