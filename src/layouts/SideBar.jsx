@@ -13,7 +13,7 @@ import {motion} from "framer-motion"
 
 export const SideBar = () => {
     return (
-        <section className="w-[272px] bg-primary-800 h-dvh flex flex-col justify-between">
+        <section className="w-[272px] bg-primary-800 h-dvh flex flex-col justify-between sticky top-0">
             <div>
                 <div className="p-3">
                     <figure className="p-3">

@@ -17,7 +17,7 @@ import ZS from "../../../assets/images/ZS.png";
 
 export const Dashboard = () => {
     return (
-        <section>
+        <section className="overflow-y-scroll">
             <title className="flex items-center justify-between w-full">
                 <h1 className="text-[28px] font-[600]">
                     Dashboard
@@ -85,7 +85,33 @@ export const Dashboard = () => {
                             ))
                         }
                     </section>
-                    <section></section>
+
+                    <section>
+                        <header className="mt-7">
+                            <h2 className="text-[18px] font-[600]">Do more with Bankit</h2>
+                        </header>
+
+                        <div className="w-full flex items-center justify-between mt-4">
+                            {
+                                features.map((feature, index) => (
+                                    <FeaturesCard key={index} {...feature} />
+                                ))
+                            }
+
+                            <div className={`max-w-[170px] h-[184px] bg-primary-150 rounded-[10px] flex flex-col justify-between p-5 `}>
+                                <div>
+                                    <img
+                                        src={'https://ik.imagekit.io/lordibe/Avatar%20Groups.png?updatedAt=1720707594065'}
+                                        alt={"avatar"}
+                                    />
+                                </div>
+
+                                <div className="text-[1rem] leading-[24px]">
+                                    Invite your friends and earn $100
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </section>
 
                 <section className="col-span-4">
@@ -95,11 +121,118 @@ export const Dashboard = () => {
                             See all <span className="text-secondary"><IoIosArrowForward className="text-[15px]" /></span>
                         </p>
                     </header>
+
+                    <section className="mt-3 flex flex-col p-2">
+                        {
+                            transactions.map((transaction, index) => (
+                                <TransactionCard key={index} {...transaction} />
+                            ))
+                        }
+                    </section>
                 </section>
             </section>
         </section>
     );
 }
+
+// eslint-disable-next-line react/prop-types
+const FeaturesCard = ({ icon, description, styles }) => {
+    return (
+        <div className={`max-w-[170px] h-[184px] rounded-[10px] flex flex-col justify-between p-5 ${styles}`}>
+            <div>
+                {icon}
+            </div>
+
+            <div className="text-[1rem] leading-[24px]">
+                {description}
+            </div>
+        </div>
+    );
+}
+
+const features = [
+    {
+        icon: <RxLink2 className="text-[35px] text-primary-200" />,
+        description: "Sell products online without a website",
+        styles: "bg-secondary-150"
+    },
+    {
+        icon: <LuBadgePercent className="text-[35px] text-primary-200" />,
+        description: "Up to 20% returns on your investment",
+        styles: "bg-secondary-200"
+    },
+    {
+        icon: <HiClipboardList className="text-[35px] text-primary-200" />,
+        description: "Easily create & send invoices on the go",
+        styles: "bg-secondary-500"
+    }
+]
+
+// eslint-disable-next-line react/prop-types
+const TransactionCard = ({ type, method, name, amount }) => {
+    return (
+        <div className="p-2">
+            <div>
+                <div className={
+                    `${type === "credit" ? 'bg-secondary-200' : 'bg-secondary-500'} 
+                        rounded-full flex items-center justify-center w-[40px] h-[40px]`
+                }>
+                    {
+                        type === "credit" ?
+                            <HiMiniArrowLongDown className={`text-secondary text-[25px]`} />
+                            :
+                            <HiMiniArrowLongUp className={`text-[25px] text-secondary-800`} />
+                    }
+                </div>
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            <p></p>
+        </div>
+    )
+}
+
+const transactions = [
+    {
+        type: "debit",
+        method: "Transfer",
+        name: "Market Square",
+        amount: "$50,000"
+    },
+    {
+        type: "credit",
+        method: "Transfer",
+        name: "Aliya Cornrad",
+        amount: "$50,000"
+    },
+    {
+        type: "credit",
+        method: "Transfer",
+        name: "Martin Stanley",
+        amount: "$50,000"
+    },
+    {
+        type: "credit",
+        method: "Transfer",
+        name: "Zain Siphron",
+        amount: "$50,000"
+    },
+    {
+        type: "debit",
+        method: "Transfer",
+        name: "Ariana Bush",
+        amount: "$50,000"
+    },
+    {
+        type: "credit",
+        method: "Transfer",
+        name: "Jack Westley",
+        amount: "$50,000"
+    }
+]
+
 
 const beneficiaries = [
     {

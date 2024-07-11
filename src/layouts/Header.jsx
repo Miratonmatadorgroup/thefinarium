@@ -3,7 +3,7 @@ import { IoNotifications } from "react-icons/io5";
 
 export const Header = () => {
     return (
-        <header className="w-full bg-white p-4 flex items-center justify-end gap-8 shadow-sm">
+        <header className="w-full bg-white p-4 flex items-center justify-end gap-8 shadow-sm sticky top-0">
             <div className="flex items-center gap-2 text-[12px]">
                 <p>Test</p>
                 <Toggle />

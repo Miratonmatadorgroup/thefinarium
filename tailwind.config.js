@@ -11,6 +11,7 @@ export default {
           DEFAULT: '#005EFE',
           light: '#F5F6F8',
           100: '#F9FAFB',
+          150: '#E3EFFC',
           200: '#404B7C',
           400: '#1D2739',
           800: '#101928'
@@ -18,7 +19,10 @@ export default {
         secondary: {
           DEFAULT: '#F56630',
           100: "#FBEAE9",
-          200: "#F2BCBA"
+          150: "#FEF6E7",
+          200: "#F2BCBA",
+          500: "#E7F6EC",
+          800: "#0F973D",
         },
         neutral: {
           light: '#E4E7EC',

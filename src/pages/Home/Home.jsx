@@ -5,9 +5,9 @@ import {Dashboard} from "./routes/Dashboard.jsx";
 export const Home = () => {
     return (
         <div className="relative flex bg-primary-100">
-            <div className="absolute border-t-[4px] border-secondary w-full" />
+            <div className="fixed border-t-[4px] border-secondary w-full z-50" />
 
-            <div>
+            <div className="">
                 <SideBar />
             </div>
 
