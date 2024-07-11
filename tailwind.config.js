@@ -16,7 +16,8 @@ export default {
           800: '#101928'
         },
         secondary: {
-          DEFAULT: '#F56630'
+          DEFAULT: '#F56630',
+          100: "#F2BCBA"
         },
         neutral: {
           light: '#E4E7EC',
