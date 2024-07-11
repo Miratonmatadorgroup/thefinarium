@@ -1,7 +1,9 @@
 import {InputField} from "../../components/InputField.jsx";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export const Login = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="grid grid-cols-3 h-dvh">
             <div className="bg-primary p-[36px]">
@@ -43,6 +45,7 @@ export const Login = () => {
 
                     <div className="col-span-5">
                         <button
+                            onClick={() => navigate('/home')}
                             className="bg-primary text-neutral-100 text-[18px] w-[163px] p-[1rem] rounded-[5px]"
                         >
                             SUBMIT

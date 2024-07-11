@@ -122,7 +122,7 @@ export const Dashboard = () => {
                         </p>
                     </header>
 
-                    <section className="mt-3 flex flex-col p-2">
+                    <section className="mt-3 flex flex-col p-2.5 bg-neutral-100 rounded-[10px] border border-neutral-light">
                         {
                             transactions.map((transaction, index) => (
                                 <TransactionCard key={index} {...transaction} />
@@ -171,25 +171,25 @@ const features = [
 // eslint-disable-next-line react/prop-types
 const TransactionCard = ({ type, method, name, amount }) => {
     return (
-        <div className="p-2">
-            <div>
+        <div className="p-[9.75px] flex items-start justify-between">
+            <div className="flex items-center gap-5">
                 <div className={
-                    `${type === "credit" ? 'bg-secondary-200' : 'bg-secondary-500'} 
+                    `${type === "credit" ? 'bg-secondary-500' : 'bg-secondary-100'} 
                         rounded-full flex items-center justify-center w-[40px] h-[40px]`
                 }>
                     {
                         type === "credit" ?
-                            <HiMiniArrowLongDown className={`text-secondary text-[25px]`} />
+                            <HiMiniArrowLongDown className={`text-secondary-800 text-[25px]`} />
                             :
-                            <HiMiniArrowLongUp className={`text-[25px] text-secondary-800`} />
+                            <HiMiniArrowLongUp className={`text-[25px] text-secondary`} />
                     }
                 </div>
-                <div>
-                    <p></p>
-                    <p></p>
+                <div className="text-[14px]">
+                    <p>{type === "credit" ? 'from' : 'to'} <span className="font-[600]">{name}</span></p>
+                    <p className="text-[12px] text-neutral-150">{method}</p>
                 </div>
             </div>
-            <p></p>
+            <p className="text-[14px] font-[600]">{type === "credit" ? '+ ' : '- '}${amount}</p>
         </div>
     )
 }
@@ -199,37 +199,37 @@ const transactions = [
         type: "debit",
         method: "Transfer",
         name: "Market Square",
-        amount: "$50,000"
+        amount: "11,000.00"
     },
     {
         type: "credit",
         method: "Transfer",
         name: "Aliya Cornrad",
-        amount: "$50,000"
+        amount: "920.00"
     },
     {
         type: "credit",
         method: "Transfer",
         name: "Martin Stanley",
-        amount: "$50,000"
+        amount: "10,000.00"
     },
     {
         type: "credit",
         method: "Transfer",
         name: "Zain Siphron",
-        amount: "$50,000"
+        amount: "290.00"
     },
     {
         type: "debit",
         method: "Transfer",
         name: "Ariana Bush",
-        amount: "$50,000"
+        amount: "5,000.00"
     },
     {
         type: "credit",
         method: "Transfer",
         name: "Jack Westley",
-        amount: "$50,000"
+        amount: "500.00"
     }
 ]
 

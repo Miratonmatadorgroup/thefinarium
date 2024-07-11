@@ -10,8 +10,11 @@ import { BiSupport } from "react-icons/bi";
 import { IoSettings } from "react-icons/io5";
 import { LuSearch } from "react-icons/lu";
 import {motion} from "framer-motion"
+import {useNavigate} from "react-router-dom";
 
 export const SideBar = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="w-[272px] bg-primary-800 h-dvh flex flex-col justify-between sticky top-0">
             <div>
@@ -85,6 +88,7 @@ export const SideBar = () => {
                     </div>
                     <p className="font-bold text-neutral-100">Lord IBE</p>
                     <motion.div
+                        onClick={() => navigate('/')}
                         whileHover={{ scale: 1.10 }}
                         whileTap={{ scale: 0.95 }}
                     >
