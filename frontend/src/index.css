@@ -55,6 +55,61 @@ body {
 .rectbg{
   background-image: url('./assets/images/rect.png');
   width: 1350px;
-  height: 880px;
+  height: 882px;
   background-size: cover;
+}
+
+.darkbg {
+  background-image: url('./assets/images/darkrect.png');
+  width: 1365px;
+  height: 647px;
+  background-size: cover;
+  position: absolute;  
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orangebg {
+  background-image: url('./assets/images/orangerect.png');
+  width: 1440px;
+  height: 833px;
+  background-size: cover;
+  position: absolute;
+  top:20rem ;
+  z-index: 1;
+}
+.linebg {
+  background-image: url('./assets/images/linesbg.png');
+  width: 100%;
+  height: 90dvh;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .darkbg{
+    background-image: url('./assets/images/darkrect.png');
+    width: 1165px;
+    height: 947px;
+    background-size: cover;
+    /* position: absolute;   */
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .orangebg {
+    background-image: url('./assets/images/orangerect.png');
+    width: 1240px;
+    height: 833px;
+    background-size: cover;
+    /* position: absolute; */
+    top:20rem ;
+    z-index: 1;
+  }
 }

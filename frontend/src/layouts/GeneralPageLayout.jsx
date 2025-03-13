@@ -5,7 +5,7 @@ import HeroSection from '../components/generalcomponents/HeroSection'
 const GeneralPageLayout = ({ children }) => {
     return (
         <div>
-            <HeroSection />
+            {/* <HeroSection /> */}
             <div className='mt-16'>
                 {children}
             </div>

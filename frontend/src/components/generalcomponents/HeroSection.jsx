@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import looper from '../../assets/images/looper.png'
 import sparkling from '../../assets/images/spark.png'
 import ringimg from '../../assets/images/ring.png'
@@ -9,12 +9,30 @@ import world3dimg from '../../assets/images/pngtree.png'
 import balanceimg from '../../assets/images/Balance.png'
 import cardimg from '../../assets/images/card.png'
 import NavBar from './NavBar';
-
+import TrustSlides from './TrustSlides';
+import anime from 'animejs'
 
 const HeroSection = () => {
+
+  const animationRef = useRef(null)
+
+
+    // function to animate display with a delay on mount/view
+  useEffect(() => {
+    if (animationRef.current) {
+      animationRef.current.style.opacity = 0;
+    }
+    anime({
+      targets: animationRef.current,
+      opacity: [0, 1],
+      duration: 1200, 
+      easing: 'easeInOutQuad', 
+      delay: 800 
+    });
+  }, [])
   return (
-        <div className="w-full overflow-hidden">
-      <div className='w-full rectbg h-[80dvh]  z-40 overflow-hidden relative'>
+    <div className="w-full overflow-hidden" ref={animationRef}>
+      <div className='w-full rectbg min-h-[80dvh]   z-40 overflow-hidden relative'>
         {/* The animated background */}
         <div
           className="absolute top-0 left-0 w-[100%] h-full bg-cover bg-start z-0"
@@ -25,8 +43,8 @@ const HeroSection = () => {
         >
         </div>
         <div className="w-11/12 mx-auto mt-10 flex items-start flex-col gap-20">
-        {/* Navbar component */}
-          <NavBar/>
+          {/* Navbar component */}
+          <NavBar />
 
           <div className="w-full flex z-50 items-center justify-between gap-5 relative">
             <div className="flex flex-col w-1/2 items-start gap-8">
@@ -35,10 +53,10 @@ const HeroSection = () => {
                 <div className="">#1 Top Fintech Banking Excellence</div>
               </div>
               <div className="relative">
-                <h1 className='font-bold text-white leading-[1.2] text-[61px] relative z-50'>
+                <h1 className='font-bold text-white leading-[1.2] text-[59px] relative z-50'>
                   The Future of Finance, Embedded
                 </h1>
-                <img src={ringimg} className='absolute z-10 -top-12 -right-5' alt="ring vector" />
+                <img src={ringimg} className='absolute z-10 -top-10 -right-2' alt="ring vector" />
               </div>
               <div className="flex flex-col items-start gap-5 ">
                 <div className="text-white">
@@ -48,7 +66,7 @@ const HeroSection = () => {
                   <img src={trustimg} alt="trustees image" />
                   <div className="text-white">Trusted by top 1% founders</div>
                 </div>
-                <div className="flex items-center gap-2 cursor-pointer">
+                <div className="flex items-center gap-4 cursor-pointer">
                   <div className="w-fit py-3 px-4 flex gap-2 bg-[#262626] rounded-full">
                     <img src={demoimg} alt="demo vector" />
                     <div className="text-white">Try Live Demo</div>
@@ -61,17 +79,15 @@ const HeroSection = () => {
               </div>
             </div>
 
-
             <div className="w-1/2">
               <div className="w-full relative">
-                <img src={world3dimg} alt="world 3d image" className='h-[26rem] -mt-12' />
-                <img src={balanceimg} alt="credit card image" className='absolute top-32 z-50 right-10' />
-                <img src={cardimg} alt="credit card image" className='absolute top-[19rem] right-10' />
+                <img src={world3dimg} alt="world 3d image" className='h-[24rem] -mt-[9rem] ml-5' />
+                <img src={balanceimg} alt="credit card image" className='absolute top-20 z-50 right-10' />
+                <img src={cardimg} alt="credit card image" className='absolute top-[16rem] right-10' />
               </div>
             </div>
           </div>
         </div>
-
         {/* Inline keyframes  */}
         <style jsx>{`
         @keyframes moveBackground {
@@ -84,6 +100,10 @@ const HeroSection = () => {
         }
       `}</style>
       </div>
+      <div className="mb-20 -mt-8 w-11/12 mx-auto py-5  px-5">
+        <TrustSlides />
+      </div>
+
     </div>
   );
 };
