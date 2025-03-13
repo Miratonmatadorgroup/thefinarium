@@ -1,0 +1,18 @@
+/* tailwind.css */
+@theme {
+    colors: {
+      custom: "#ff5733",
+      brand: {
+        primary: "#1a73e8",
+        secondary: "#188038"
+      }
+    },
+    fontFamily: {
+      urbanist: ["Urbanist", "sans-serif"]
+    },
+    extend: {
+      lineHeight: {
+        tightest: "1.1"
+      }
+    }
+  }

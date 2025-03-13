@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -14,7 +16,12 @@
 @font-face {
   font-family: 'Urbanist';
   src: url('utils//fonts/Urbanist-VariableFont_wght.ttf') format('truetype'),
-       url('utils/fonts/Urbanist-Italic-VariableFont_wght.ttf') format('truetype');
+       url('utils/fonts/Urbanist-Italic-VariableFont_wght.ttf') format('truetype'),
+       url('utils/fonts/Urbanist-Bold.ttf') format('truetype'),
+       url('utils/fonts/Urbanist-Black.ttf') format('truetype'),
+       url('utils/fonts/Urbanist-BlackItalic.ttf') format('truetype'),
+       url('utils/fonts/Urbanist-ExtraBold.ttf') format('truetype'),
+       url('utils/fonts/Urbanist-SemiBold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -28,10 +35,26 @@
 
 .urban{
   font-family: 'Urbanist',sans-serif;
+  font-weight: 900
 }
 body {
   margin: 0;
   font-family: 'Urbanist',sans-serif;
   box-sizing: border-box;
   padding: 0;
+}
+
+.homebg{
+  background-image: url('./assets/images/looper.png');
+  width: 100%;
+  height: 100%;
+  background-position:start;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.rectbg{
+  background-image: url('./assets/images/rect.png');
+  width: 1350px;
+  height: 880px;
+  background-size: cover;
 }

@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from '../components/generalcomponents/NavBar'
 import Footer from '../components/generalcomponents/Footer'
+import HeroSection from '../components/generalcomponents/HeroSection'
 
 const GeneralPageLayout = ({ children }) => {
     return (
         <div>
-            <NavBar />
+            <HeroSection />
             <div className='mt-16'>
                 {children}
             </div>
