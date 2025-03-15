@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
     ]
 
     return (
-        <div className='w-full py-20 flex items-center justify-center'>
+        <div className='w-full lg:pb-20 pb-10 lg:pt-40 pt-10 flex items-center justify-center'>
             <div className="flex items-center flex-col gap-5">
                 <RoundOutlineButton text={`Seamless Solution`}/>
                 <div className="text-center text-[39px] leading-[1.2] font-semibold">Why Choose Us</div>

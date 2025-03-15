@@ -6,24 +6,28 @@ import CrossBorderAndOneAPi from '../../components/generalcomponents/CrossBorder
 import WhoWeHelp from '../../components/generalcomponents/WhoWeHelp'
 import Testimonials from '../../components/generalcomponents/Testimonials'
 import Footer from '../../components/generalcomponents/Footer'
+import TrustSlides from '../../components/generalcomponents/TrustSlides'
 
 const HomePage = () => {
     const gray = `bg-[#e7e7e7]`
     return (
-        <div className="w-full bg-[#f6f6f6] ">
-            <div className=" pb-20">
+        <div className="w-full bg-[#f6f6f6] overflow-x-hidden ">
+            <div className="pb-10 lg:pb-20">
                 <HeroSection />
+                <div className="w-full  ">
+                    <TrustSlides />
+                </div>
                 <div className="w-11/12 mx-auto">
                     <WhyChooseUs />
                 </div>
             </div>
-            <div className={`${gray} w-full py-20`}>
+            <div className={`${gray} w-full py-10`}>
                 <BuildAndLaunch />
             </div>
             <div className="py-20">
                 <CrossBorderAndOneAPi />
             </div>
-            <div className="py-10 overflow-hidden min-h-[200dvh]">
+            <div className="py-10  min-h-[200dvh]">
                 <WhoWeHelp />
             </div>
             <div className="py-0 w-full ">

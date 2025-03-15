@@ -44,6 +44,21 @@ body {
   padding: 0;
 }
 
+
+
+
+
+/* Default (Mobile First) */
+.rectbg {
+  background-image: url('./assets/mobile/mobile-rect.png');
+  width: 100%;
+  max-width: 580px;
+  position: absolute;
+  height: 860px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .homebg{
   background-image: url('./assets/images/looper.png');
   width: 100%;
@@ -52,14 +67,9 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.rectbg{
-  background-image: url('./assets/images/rect.png');
-  width: 1350px;
-  height: 882px;
-  background-size: cover;
-}
 
-.darkbg {
+
+/* .darkbg {
   background-image: url('./assets/images/darkrect.png');
   width: 1365px;
   height: 647px;
@@ -69,9 +79,9 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
-.orangebg {
+/* .orangebg {
   background-image: url('./assets/images/orangerect.png');
   width: 1440px;
   height: 833px;
@@ -79,37 +89,88 @@ body {
   position: absolute;
   top:20rem ;
   z-index: 1;
-}
+} */
 .linebg {
-  background-image: url('./assets/images/linesbg.png');
-  width: 100%;
-  height: 90dvh;
+  background-image: url('./assets/images/linesmainbg.png');
   background-position: center;
   background-size: cover;
-  border-radius: 30px;
   background-repeat: no-repeat;
+}
+
+
+/* Dark background */
+.darkbg {
+  background-image: url('./assets/mobile/mobile-darkrectangle.png');
+  width: 100%;
+  max-width: 440px;
+  height: 1153px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Orange background */
+.orangebg {
+  background-image: url('./assets/mobile/mobile-orangerectangle.png');
+  width: 100%;
+  max-width: 400px;
+  height: 823px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .darkbg{
+/* Tablet and Above */
+@media (min-width: 768px) {
+  .rectbg {
+    background-image: url('./assets/images/rect.png');
+    background-position-x: center;
+    width: 799px;
+    max-width: 1024px;
+    position: absolute;
+    height: 820px;
+  }
+  .darkbg {
     background-image: url('./assets/images/darkrect.png');
-    width: 1165px;
-    height: 947px;
+    width: 100%;
+    max-width: 1365px;
+    height: 647px;
     background-size: cover;
-    /* position: absolute;   */
-    z-index: 2;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    background-position: center;
+    position: relative;
+    z-index: 1;
   }
   .orangebg {
     background-image: url('./assets/images/orangerect.png');
-    width: 1240px;
-    height: 833px;
+    width: 100%;
+    max-width: 1440px;
+    height: 481px;
     background-size: cover;
-    /* position: absolute; */
-    top:20rem ;
-    z-index: 1;
+    background-position: center;
+    position: absolute;
+    z-index: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .rectbg {
+    max-width: 1650px;
+    width: 1350px;
+    height: 880px;
+    /* border: 1px solid red; */
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .rectbg {
+    max-width: 1400px;
+    height: 1100px;
   }
 }

@@ -11,11 +11,12 @@ import demoimg from '../../assets/images/demo.png'
 import solar_star_dark from '../../assets/images/solar_star-dark.png';
 import trustimg from '../../assets/images/trust.png'
 import RoundArrowButton from './RoundArrowButton';
+import { IoArrowForwardSharp } from 'react-icons/io5';
 
 const Testimonials = () => {
     const sliderRef = useRef(null);
     const [, setCurrentSlide] = useState(0);
-    const lead = `leading-[1.2] text-[39px] font-bold`;
+    const lead = `leading-[1.2] text-[25px] md:text-[39px]  font-bold`;
 
     const testimonials = [
         {
@@ -28,7 +29,7 @@ const Testimonials = () => {
             img: testimg2,
             name: 'Emmanuel Maks',
             job_title: 'CEO, Marasoftpay',
-            content: `Marasoftpay has revolutionized the way we integrate with our banking partners. Their platform is incredibly intuitive, and the support team is always available to help. Since implementing Finarium, we've seen a significant reduction in manual errors and an increase in overall efficiency. We couldn't be happier with the results!"`
+            content: `Marasoftpay has revolutionized the way we integrate with our banking partners. Their platform is incredibly intuitive, and the support team is always available to help. Since implementing Finarium, we've seen a significant reduction in manual errors and an increase in overall efficiency. "`
         },
 
         {
@@ -57,7 +58,7 @@ const Testimonials = () => {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 1.03,
                     slidesToScroll: 1
                 }
             }
@@ -68,9 +69,10 @@ const Testimonials = () => {
         sliderRef.current.slickNext();
     };
 
+
     return (
-        <div className='w-full'>
-            <div className="w-11/12 mx-auto">
+        <div className='w-full mt-[23rem] md:-mt-[60rem] lg:mt-0'>
+            <div className="w-10/12 mx-auto">
                 <div className="w-full flex items-start gap-2 flex-col">
                     <RoundOutlineButton text={`Testimonials`} />
                     <div className={`${lead}`}>Don't take our word for it</div>
@@ -78,14 +80,16 @@ const Testimonials = () => {
                         <Slider ref={sliderRef} {...settings}>
                             {testimonials.map((item, i) => (
                                 <div key={i} className="px-2">
-                                    <div className="bg-[#d9d9d9] w-full h-[60dvh] flex items-center flex-col gap-3 rounded-md py-10 px-5">
+                                    <div className="bg-[#d9d9d9] w-full min-h-[50dvh] md:min-h-[40dvh] lg:min-h-[60dvh] flex flex-col items-center gap-3 rounded-2xl px-5 py-5">
                                         <img src={item.img} alt={`${item.name}'s portrait`} />
-                                        <div className={`leading-[1.2] text-[16px] font-bold`}>{item.name}</div>
-                                        <div className={`leading-[1.2] text-[#7A7A7A] text-[16px]`}>{item.job_title}</div>
-                                        <div className={`leading-[1.2] text-[16px] tracking-wide`}>{item.content}</div>
+                                        <div className="leading-[1.2] text-[16px] font-bold">{item.name}</div>
+                                        <div className="leading-[1.2] text-[#7A7A7A] text-[16px]">{item.job_title}</div>
+                                        <div className="leading-[1.2] text-[16px] tracking-wide flex-grow overflow-auto">
+                                            {item.content}
+                                        </div>
                                         <div className="flex items-center gap-3">
                                             {new Array(4).fill(0).map((_, k) => (
-                                                <img key={k} src={solar_star} alt='five star rating' />
+                                                <img key={k} src={solar_star} alt="five star rating" />
                                             ))}
                                             <img src={solar_star_dark} alt="five star rating" />
                                         </div>
@@ -93,41 +97,59 @@ const Testimonials = () => {
                                 </div>
                             ))}
                         </Slider>
+
                         <div
-                            className="absolute cursor-pointer top-1/2 -right-8 transform -translate-y-1/2 hover:scale-110 transition-transform duration-300"
+                            className="absolute cursor-pointer  -right-5 top-1/2 transform -translate-y-1/2 hover:scale-110 transition-transform duration-300"
                             onClick={goToNext}
                         >
                             <img src={chevron} className='' alt="Next testimonial" />
                         </div>
                     </div>
                 </div>
-                <div className="my-40 w-full flex items-center ">
-                    <div className=" w-full linebg">
-                        <div className="h-full flex items-center justify-center rounded-[30px] bg-[#3d3d3d]/70  bg-opacity-50">
-                            <div className="flex items-center flex-col gap-5 text-white">
-                                <div className="flex items-center gap-2">
-                                    {new Array(5).fill(0).map((_, k) => (
-                                        <img key={k} src={solar_star} alt='five star rating' />
-                                    ))}
-                                    <div className="">4.9/5</div>
-                                </div>
-                                <img src={trustimg} alt="" />
-                                <div className="text-[16px]">Over 100K+ Entrepreneurs. and businesses choose us.</div>
-                                <div className={`leading-[1.2] text-[40px] lg:text-[61px] font-bold w-full lg:w-[70%] mx-auto  text-center`}>Ready to Build the Future of Finance?</div>
-                                <div className="text-[16px]">Embed banking, payments, and lending in days, not months.</div>
-                                <div className="flex w-full  justify-center lg:w-1/2 flex-col lg:flex-row gap-5 items-center">
-                                    <div className="w-fit py-3 px-4 flex gap-2 bg-[#cc5802] rounded-full">
-                                        <img src={demoimg} alt="demo vector" />
-                                        <div className="text-white">Request a Demo</div>
-                                    </div>
-                                    <RoundArrowButton title={`Open an Account`}/>
+
+            </div>
+            <div className="mb-10 mt-16 w-11/12 md:mb-24  mx-auto flex items-center">
+                <div className="relative w-full  h-[406px] md:h-[460px] lg:h-[500px] rounded-xl overflow-hidden">
+                    {/* Background Image Container */}
+                    <div className="linebg w-full h-full"></div>
+
+                    {/* Overlay to reduce brightness */}
+                    <div className="absolute top-0 left-0 w-full h-full bg-[#3f3f3f]/70 rounded-xl"></div>
+
+                    {/* Content Container */}
+                    <div className="absolute top-0 left-0 w-full   h-full flex items-center justify-center flex-col gap-3  text-white ">
+                        <div className="flex items-center gap-2">
+                            {new Array(5).fill(0).map((_, k) => (
+                                <img key={k} src={solar_star} alt="five star rating" />
+                            ))}
+                            <div>4.9/5</div>
+                        </div>
+                        <img src={trustimg} alt="Trust Badge" />
+                        <div className="text-[13px] md:text-[16px] font-light text-center">
+                            Over 100K+ Entrepreneurs and businesses choose us.
+                        </div>
+                        <div className="text-[25px] md:text-[40px] lg:text-[61px] font-bold w-full lg:w-[70%] mx-auto text-center leading-[1.2]">
+                            Ready to Build the Future of Finance?
+                        </div>
+                        <div className="text-[13px] px-5 md:text-[16px]  text-center">
+                            Embed banking, payments, and lending in days, not months.
+                        </div>
+                        <div className="flex w-full md:w-11/12 md:justify-center mx-auto px-2 justify-between gap-4   items-center">
+                            <div className="w-1/2 md:w-1/3 cursor-pointer lg:w-1/4 py-3 md:justify-center px-4 flex gap-2 bg-[#cc5802] rounded-full">
+                                <img src={demoimg} alt="Demo Vector" className='w-5' />
+                                <div className="text-white text-[13px] md:text-[16px]">Request a Demo</div>
+                            </div>
+                            <div className="w-1/2 md:w-1/3 lg:w-1/4 cursor-pointer flex  items-center justify-between gap-3 pl-3 py-0.5 lg:py-1 rounded-full border  border-[#cc5802]">
+                                <div className={`text-[#cc5802] text-[13px] md:text-[16px] `}>Open an Account</div>
+                                <div className="md:p-3 p-2 rounded-full bg-[#cc5802] mr-0.5">
+                                    <IoArrowForwardSharp className={`text-white`} />
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };

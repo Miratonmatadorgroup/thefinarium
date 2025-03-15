@@ -93,7 +93,7 @@ const Footer = () => {
   ]
   return (
     <div className="w-full overflow-hidden">
-      <div className='w-full pt-20 lg:pb-20 pb-10 bg-[#000000] text-white'>
+      <div className='w-full pt-20 lg:pb-40 pb-10 bg-[#000000] text-white'>
         <div className="w-11/12 mx-auto">
           <div className="w-full flex items-start flex-col lg:flex-row justify-between">
 
@@ -131,9 +131,9 @@ const Footer = () => {
               </div>
               </div>
 
-              <div className="flex items-start flex-col gap-8 w-10/12 lg:w-full">
+              <div className="flex items-start flex-col gap-8 w-10/12 md:w-full">
                 <div className="text-[16px] font-bold">NewsLetter</div>
-                <div className="w-full bg-white text-black px-3 py-2 border rounded-full flex items-center gap-3">
+                <div className="w-full bg-white text-black px-3 py-1.5 border rounded-full flex items-center gap-3">
                   <input type="text" className='h-10 w-full pl-2 outline-none text-balance' />
                   <button className='w-fit text-[13px] px-8 py-3 cursor-pointer rounded-full text-white bg-[#cc5802]'>Subscribe</button>
                 </div>
@@ -150,8 +150,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-5 bg-white ">
-        <div className="text-center">© 2025 Finarium   Inc. 180 Grand Avenue, 6th Floor, Oakland, CA 94612 +1 (929) 256-7807</div>
+      <div className="py-5 bg-white px-5">
+        <div className="text-center text-sm md:text-base">© 2025 Finarium   Inc. 180 Grand Avenue, 6th Floor, Oakland, CA 94612 +1 (929) 256-7807</div>
       </div>
     </div>
   )
