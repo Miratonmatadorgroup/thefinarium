@@ -49,9 +49,9 @@ const WhyChooseUs = () => {
                                     <img src={item.img} alt="" className="mb-3" />
                                 </div>
                                 <div className="relative z-10 flex items-center flex-col gap-3 group-hover:text-white transition-colors duration-500">
-                                    <div className="text-[16px] leading-[1.2] font-semibold">{item.title}</div>
-                                    <div className="text-center text-[13px] leading-[1.2]">{item.content1}</div>
-                                    <div className="text-center text-[13px] leading-[1.2]">{item.content2}</div>
+                                    <div className="text-[16px] md:text-[19px] leading-[1.2] font-semibold">{item.title}</div>
+                                    <div className="text-center text-[13px] md:text-[16px] leading-[1.2]">{item.content1}</div>
+                                    <div className="text-center text-[13px] md:text-[16px] leading-[1.2]">{item.content2}</div>
                                 </div>
                             </div>
                         )
