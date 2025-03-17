@@ -44,11 +44,11 @@ const WhyChooseUs = () => {
                         const isEven = i % 2 === 0
                         return (
                             <div key={i} className="w-full bg-white cursor-pointer group relative flex items-center flex-col gap-3 py-5 px-3 rounded-md overflow-hidden">
-                                <div className={`absolute z-0 inset-0 bg-[#cc5802] rounded-md transition-transform transform scale-y-0 group-hover:scale-y-100 ${isEven ? 'origin-top':'origin-bottom'} duration-500`}></div>
-                                <div className="relative z-10 group-hover:text-white transition-colors duration-400">
+                                
+                                <div className="relative z-10 ">
                                     <img src={item.img} alt="" className="mb-3" />
                                 </div>
-                                <div className="relative z-10 flex items-center flex-col gap-3 group-hover:text-white transition-colors duration-500">
+                                <div className="relative z-10 flex items-center flex-col gap-3  ">
                                     <div className="text-[16px] md:text-[19px] leading-[1.2] font-semibold">{item.title}</div>
                                     <div className="text-center text-[13px] md:text-[16px] leading-[1.2]">{item.content1}</div>
                                     <div className="text-center text-[13px] md:text-[16px] leading-[1.2]">{item.content2}</div>
