@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import HeroSection from '../../components/generalcomponents/HeroSection'
 import WhyChooseUs from '../../components/generalcomponents/WhyChooseUs'
 import BuildAndLaunch from '../../components/generalcomponents/BuildAndLaunch'
@@ -7,17 +7,33 @@ import WhoWeHelp from '../../components/generalcomponents/WhoWeHelp'
 import Testimonials from '../../components/generalcomponents/Testimonials'
 import Footer from '../../components/generalcomponents/Footer'
 import TrustSlides from '../../components/generalcomponents/TrustSlides'
+import anime from 'animejs'
 
 const HomePage = () => {
+
+    const animationRef = useRef(null)
+    // function to animate display with a delay on mount/view
+    useEffect(() => {
+      if (animationRef.current) {
+        animationRef.current.style.opacity = 0;
+      }
+      anime({
+        targets: animationRef.current,
+        opacity: [0, 1],
+        duration: 1200,
+        easing: 'easeInOutQuad',
+        delay: 800
+      });
+    }, [])
     const gray = `bg-[#e7e7e7]`
     return (
-        <div className="w-full bg-[#f6f6f6] overflow-x-hidden ">
+        <div className="w-full bg-[#f6f6f6] overflow-x-hidden " ref={animationRef}>
             <div className="pb-10 lg:pb-20">
                 <HeroSection />
                 <div className="w-full  ">
                     <TrustSlides />
                 </div>
-                <div className="w-11/12 mx-auto">
+                <div id="why-choose-us" className="w-11/12 mx-auto">
                     <WhyChooseUs />
                 </div>
             </div>

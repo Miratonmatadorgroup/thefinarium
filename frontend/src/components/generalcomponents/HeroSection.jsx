@@ -9,30 +9,13 @@ import world3dimg from '../../assets/images/pngtree.png'
 import balanceimg from '../../assets/images/Balance.png'
 import cardimg from '../../assets/images/card.png'
 import NavBar from './NavBar';
-import anime from 'animejs'
+
 
 
 const HeroSection = () => {
 
-  const animationRef = useRef(null)
-  // function to animate display with a delay on mount/view
-  useEffect(() => {
-    if (animationRef.current) {
-      animationRef.current.style.opacity = 0;
-    }
-    anime({
-      targets: animationRef.current,
-      opacity: [0, 1],
-      duration: 1200,
-      easing: 'easeInOutQuad',
-      delay: 800
-    });
-  }, [])
-
-
-
   return (
-    <div className="w-full mb-[7rem] lg:mb-[20rem]  " ref={animationRef}>
+    <div className="w-full mb-[7rem] lg:mb-[20rem]  " >
 
       {/* background bg */}
       <div className='rectbg  overflow-hidden '>
