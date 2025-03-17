@@ -60,7 +60,7 @@ const Testimonials = () => {
 
 
     return (
-        <div className='w-full mt-[23rem] md:-mt-[60rem] lg:mt-0'>
+        <div className='w-full  relative  '>
             <div className="w-10/12 mx-auto">
                 <div className="w-full flex items-start gap-2 flex-col">
                     <RoundOutlineButton text={`Testimonials`} />

@@ -35,7 +35,7 @@ const WhoWeHelp = () => {
 
    
     return (
-        <div className='w-full relative mt-10  mb-20'>
+        <div className='w-full relative my-10 '>
             <div className="darkbg ">
                 <div className="w-11/12 mx-auto relative flex items-center flex-col md:gap-16 lg:gap-4 md:flex-row justify-between">
                     <div className="w-full md:w-1/2 relative  md:-top-60 lg:-top-70 lg:-left-30">
@@ -68,11 +68,11 @@ const WhoWeHelp = () => {
                     </div>
                 </div>
             </div>
-            <div className=" orangebg top-[55rem] md:top-[35rem] z-10">
+            <div className=" orangebg -mt-[10rem] md:-mt-[5rem] lg:-mt-[7rem]  z-10">
                 <div className="w-full h-full relative">
                     <img src={vector1} className='absolute top-[11rem] md:-top-[3.3rem] left-0' alt="" />
                     <img src={vector2} className='absolute -bottom-10  md:right-2 md:-bottom-35 right-10' alt="" />
-                    <div className="w-full relative h-full  pt-40 md:pt-0 flex items-center justify-center">
+                    <div className="w-full relative h-full flex items-center justify-center">
                         <div className="w-11/12  mx-auto text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             <div className="flex items-center gap-1 flex-col ">
                                 <div className={`${lead}  text-[45px] font-bold`}>$<Counter endValue={1} /> <span> Million</span></div>

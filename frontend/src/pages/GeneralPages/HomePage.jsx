@@ -43,10 +43,10 @@ const HomePage = () => {
             <div className="py-20">
                 <CrossBorderAndOneAPi />
             </div>
-            <div className="py-10  min-h-[200dvh]">
+            <div className="py-10 ">
                 <WhoWeHelp />
             </div>
-            <div className="py-0 w-full ">
+            <div className=" w-full ">
                 <Testimonials />
             </div>
             <Footer />

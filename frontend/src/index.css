@@ -52,7 +52,7 @@ body {
 .rectbg {
   background-image: url('./assets/mobile/mobile-rect.png');
   width: 100%;
-  max-width: 580px;
+  max-width: 780px;
   position: absolute;
   height: 860px;
   background-size: cover;
@@ -69,27 +69,6 @@ body {
 }
 
 
-/* .darkbg {
-  background-image: url('./assets/images/darkrect.png');
-  width: 1365px;
-  height: 647px;
-  background-size: cover;
-  position: absolute;  
-  z-index: 2;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-} */
-
-/* .orangebg {
-  background-image: url('./assets/images/orangerect.png');
-  width: 1440px;
-  height: 833px;
-  background-size: cover;
-  position: absolute;
-  top:20rem ;
-  z-index: 1;
-} */
 .linebg {
   background-image: url('./assets/images/linesmainbg.png');
   background-position: center;
@@ -102,11 +81,11 @@ body {
 .darkbg {
   background-image: url('./assets/mobile/mobile-darkrectangle.png');
   width: 100%;
-  max-width: 440px;
+  max-width: 740px;
   height: 1153px;
   background-size: cover;
   background-position: center;
-  position: absolute;
+  position: relative;
   z-index: 2;
   top: 0;
   left: 50%;
@@ -117,11 +96,11 @@ body {
 .orangebg {
   background-image: url('./assets/mobile/mobile-orangerectangle.png');
   width: 100%;
-  max-width: 400px;
+  max-width: 800px;
   height: 823px;
   background-size: cover;
   background-position: center;
-  position: absolute;
+  position: relative;
   z-index: 1;
 }
 
@@ -143,17 +122,19 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
+    /* border: 2px solid red; */
     z-index: 1;
   }
   .orangebg {
     background-image: url('./assets/images/orangerect.png');
     width: 100%;
     max-width: 1440px;
-    height: 481px;
+    max-height: 481px;
     background-size: cover;
     background-position: center;
-    position: absolute;
+    position: relative;
     z-index: 0;
+    /* border: 2px solid red; */
   }
 }
 
