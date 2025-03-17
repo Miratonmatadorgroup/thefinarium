@@ -69,7 +69,7 @@ const Testimonials = () => {
                         <Slider ref={sliderRef} {...settings}>
                             {testimonials.map((item, i) => (
                                 <div key={i} className="px-2">
-                                    <div className="bg-[#d9d9d9] w-full min-h-[50dvh] md:min-h-[40dvh] lg:min-h-[60dvh] flex flex-col items-center gap-3 rounded-2xl px-5 py-5">
+                                    <div className="bg-[#d9d9d9] w-full  flex flex-col items-center gap-3 rounded-2xl px-5 py-5">
                                         <img src={item.img} alt={`${item.name}'s portrait`} />
                                         <div className="leading-[1.2] text-[16px] font-bold">{item.name}</div>
                                         <div className="leading-[1.2] text-[#7A7A7A] text-[16px]">{item.job_title}</div>
