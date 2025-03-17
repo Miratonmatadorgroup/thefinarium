@@ -15,15 +15,17 @@ const Footer = () => {
   const links = [
     {
       logo: location,
-      title: 'Kano | Abuja | Lagos | California'
+      title: 'California'
     },
     {
       logo: sms,
-      title: 'Vendorsupport@finarium.com'
+      title: 'hello@thefinarium.com',
+      url:'/'
     },
     {
       logo: globe,
-      title: 'finarium.com'
+      title: 'finarium.com',
+      url:'/'
     },
   ]
 
@@ -104,7 +106,7 @@ const Footer = () => {
                 {links.map((item, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <img src={item.logo} alt={`${item.title} image`} />
-                    <div className="">{item.title}</div>
+                    <div className={`${item.url ? 'cursor-pointer':''}`}>{item.title}</div>
                   </div>
                 ))}
               </div>
@@ -140,7 +142,7 @@ const Footer = () => {
                 <div className="">Get the latest News and Updates</div>
                 <div className="flex items-center gap-4">
                   {socialLinks.map((item,i) =>(
-                    <img key={i} src={item.logo}className='cursor-pointer' />
+                    <img key={i} src={item.logo}className='cursor-pointer hover:scale-115 transition duration-500 ease-in-out' />
                   ))}
                 </div>
               </div>

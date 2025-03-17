@@ -10,20 +10,24 @@ import { useNavigate, Link } from "react-router-dom";
 
 const NavBar = () => {
   const [menuOptions, setMenuOptions] = useState(false);
-  const [bgcolor, setBgColor] = useState(false);
+  const [bgcolor, setBgColor] = useState(null);
   const menuRef = useRef(null);
   const menuItemsRef = useRef(null);
 
   useEffect(() => {
     // Function to handle scroll events
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;    
-      if(scrollPosition > 550) {
-        setBgColor(true);
+      const scrollPosition = window.scrollY;
+    
+      if (scrollPosition > 500) {
+        setBgColor('white');  
+      } else if (scrollPosition >= 150) {
+        setBgColor('orange');
       } else {
-        setBgColor(false);
+        setBgColor(null);
       }
     };
+    
 
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
@@ -107,9 +111,9 @@ const NavBar = () => {
       </div>
 
       {/* Navbar */}
-      <div className={`flex w-full lg:px-10 fixed top-0 py-6 mx-auto lg:justify-between justify-between px-3 md:px-10 items-center transition-colors duration-300 ${bgcolor ? 'bg-white' : ''}`}>
+      <div className={`flex w-full lg:px-10 fixed top-0 py-6 mx-auto lg:justify-between justify-between px-3 md:px-10 items-center transition-colors duration-300 ${bgcolor ==='orange' ? 'bg-[#d56600]' : bgcolor ==='white' ?'bg-white':''}`}>
         <div onClick={()=> navigate('/')} className="transition-opacity duration-300">
-          <img src={bgcolor ? logo2 : logo} className='lg:w-fit cursor-pointer w-[250px]' alt="finarium logo" />
+          <img src={bgcolor === 'orange' || bgcolor === null ? logo : logo2} className='lg:w-fit cursor-pointer w-[250px]' alt="finarium logo" />
         </div>
         <div className="lg:hidden">
           <CgMenu

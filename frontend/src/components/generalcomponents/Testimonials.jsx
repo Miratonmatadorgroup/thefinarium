@@ -22,8 +22,8 @@ const Testimonials = () => {
         {
             img: testimg1,
             name: 'Shade',
-            job_title: 'CEO, BankFactory US',
-            content: `BankFactory has revolutionized the way we integrate with our banking partners. Their platform is incredibly intuitive, and the support team is always available to help. Since implementing Finarium, we've seen a significant reduction in manual errors and an increase in overall efficiency. We couldn't be happier with the results!`
+            job_title: 'CEO of Finarium USA',
+            content: `FInarium has revolutionized the way we integrate with our banking partners. Their platform is incredibly intuitive, and the support team is always available to help. Since implementing Finarium, we've seen a significant reduction in manual errors and an increase in overall efficiency. We couldn't be happier with the results!`
         },
         {
             img: testimg2,
@@ -32,18 +32,7 @@ const Testimonials = () => {
             content: `Marasoftpay has revolutionized the way we integrate with our banking partners. Their platform is incredibly intuitive, and the support team is always available to help. Since implementing Finarium, we've seen a significant reduction in manual errors and an increase in overall efficiency. "`
         },
 
-        {
-            img: testimg1,
-            name: 'Sarah Johnson',
-            job_title: 'CTO, TechFlow Solutions',
-            content: `The integration capabilities of this platform are outstanding. We've been able to connect our systems seamlessly, resulting in faster transactions and happier customers. The technical support team has been responsive and knowledgeable throughout our implementation journey.`
-        },
-        {
-            img: testimg2,
-            name: 'David Chen',
-            job_title: 'Director of Operations, PayEase',
-            content: `We've tried several banking integration platforms, but this one stands out for its reliability and ease of use. Our development team was able to implement it quickly, and we've seen a 40% improvement in processing times. The analytics dashboard has also provided valuable insights for our business decisions.`
-        }
+        
     ];
 
     const settings = {
