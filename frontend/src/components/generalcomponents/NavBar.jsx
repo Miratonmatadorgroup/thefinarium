@@ -103,7 +103,7 @@ const NavBar = () => {
               <img src={logo2} className='lg:w-fit cursor-pointer  w-[250px]' alt="finarium logo" />
             </div>
             <div onClick={() => setMenuOptions(false)} className="cursor-pointer">
-              <IoMdClose className="text-4xl md:text-5xl" />
+              <IoMdClose className="text-4xl text-[var(--color-dark)] md:text-5xl" />
             </div>
           </div>
 
@@ -112,7 +112,7 @@ const NavBar = () => {
               {navIcons.map((item, i) => (
                 <div key={i} 
                 onClick={() => handleNavClick(item.path)}
-                className="cursor-pointer text-[16px]">{item.name}</div>
+                className="cursor-pointer text-[var(--color-dark)] text-[16px]">{item.name}</div>
               ))}
 
               <div className="flex flex-col items-center gap-3 mt-2">
@@ -132,7 +132,7 @@ const NavBar = () => {
         <div className="lg:hidden">
           <CgMenu
             onClick={() => setMenuOptions(true)}
-            className={`${bgcolor ? 'text-black' : 'text-white'} text-4xl md:text-5xl transition-colors duration-300`} />
+            className={`${bgcolor ? 'text-black' : 'text-white'} text-4xl md:text-5xl cursor-pointer transition-colors duration-300`} />
         </div>
         <div className="lg:flex hidden items-center gap-5">
           {navIcons.map((item, i) => (

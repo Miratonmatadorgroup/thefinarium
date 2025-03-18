@@ -24,17 +24,17 @@ const TrustSlides = () => {
                 <div className="font-semibold text-[16px] w-full text-[var(--color-dark)] lg:w-1/4 mb-4 md:mb-0">
                     Trusted By Over 25k+ Companies and Businesses Across the Globe.
                 </div>
-                <div className="w-full lg:w-5/6 ">
+                <div className="w-full lg:w-5/6  ">
                     <Marquee
                         speed={40}
                         gradient={false}
                     >
                         {images.map((img, i) => (
-                            <div key={i} className="mx-4 mt-3 lg:mt-0">
+                            <div key={i} className="mx-4  mt-3 lg:mt-0 overflow-y-clip">
                                 <img
                                     src={img.img}
                                     alt={`Trusted company ${i}`}
-                                    className="lg:h-[60.37px] h-[58px] w-[205px] object-contain"
+                                    className="lg:h-[60.37px] hover:scale-110 cursor-pointer transition ease-in-out h-[58px] w-[180px] object-contain"
                                 />
                             </div>
                         ))}
