@@ -35,7 +35,7 @@ const BuildAndLaunch = () => {
     ]
     return (
         <div className='w-full'>
-            <div className="w-11/12 flex-col lg:flex-row mx-auto flex items-center justify-between gap-10 lg:gap-16">
+            <div className="w-11/12 flex-col lg:flex-row text-[var(--color-dark)] mx-auto flex items-center justify-between gap-10 lg:gap-16">
                 <div className="w-full lg:w-1/2">
                     <div className="w-full flex lg:items-start items-center flex-col gap-5">
                         <RoundOutlineButton text={`Build & Launch`} />

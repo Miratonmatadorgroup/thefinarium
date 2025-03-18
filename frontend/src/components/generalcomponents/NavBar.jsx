@@ -125,7 +125,7 @@ const NavBar = () => {
       </div>
 
       {/* Navbar */}
-      <div className={`flex w-full lg:px-10 fixed top-0 py-6 mx-auto lg:justify-between justify-between px-3 md:px-10 items-center transition-colors duration-300 ${bgcolor === 'orange' ? 'bg-[#d56600]' : bgcolor === 'white' ? 'bg-white' : ''}`}>
+      <div className={`flex w-full lg:px-10 fixed top-0 py-6 mx-auto lg:justify-between justify-between px-3 md:px-10 items-center transition-colors text-[var(--color-dark)] duration-300 ${bgcolor === 'orange' ? 'bg-[#d56600] ' : bgcolor === 'white' ? 'bg-white' : ''}`}>
         <div onClick={() => navigate('/')} className="transition-opacity duration-300">
           <img src={bgcolor === 'orange' || bgcolor === null ? logo : logo2} className='lg:w-fit cursor-pointer w-[250px]' alt="finarium logo" />
         </div>

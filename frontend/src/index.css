@@ -2,16 +2,33 @@
 
 @import "tailwindcss";
 
+
+
+/* Force light mode */
+@layer base {
+  :root {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+    /* color: black !important; */
+  }
+  html {
+    color-scheme: light !important;
+  }
+}
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
+  color-scheme: normal !important;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --color-primary: #FF7A00 !important;
+  --color-grey: #7A7A7A !important;
+  --color-dark: #333333 !important;
 }
 @font-face {
   font-family: 'Urbanist';
@@ -42,6 +59,7 @@ body {
   font-family: 'Urbanist',sans-serif;
   box-sizing: border-box;
   padding: 0;
+  color: white;
 }
 
 

@@ -32,7 +32,7 @@ const Testimonials = () => {
             content: `Marasoftpay has revolutionized the way we integrate with our banking partners. Their platform is incredibly intuitive, and the support team is always available to help. Since implementing Finarium, we've seen a significant reduction in manual errors and an increase in overall efficiency. "`
         },
 
-        
+
     ];
 
     const settings = {
@@ -62,17 +62,17 @@ const Testimonials = () => {
     return (
         <div className='w-full  relative  '>
             <div className="w-10/12 mx-auto">
-                <div className="w-full flex items-start gap-2 flex-col">
+                <div className="w-full flex items-start text-[var(--color-dark)] gap-2 flex-col">
                     <RoundOutlineButton text={`Testimonials`} />
                     <div className={`${lead}`}>Don't take our word for it</div>
                     <div className="mt-2 w-full relative">
                         <Slider ref={sliderRef} {...settings}>
                             {testimonials.map((item, i) => (
                                 <div key={i} className="px-2">
-                                    <div className="bg-[#d9d9d9] w-full  flex flex-col items-center gap-3 rounded-2xl px-5 py-5">
+                                    <div className="!bg-[#d9d9d9]  w-full min-h-[50dv] md:min-h-fit  flex flex-col items-center gap-3 rounded-2xl px-5 py-5">
                                         <img src={item.img} alt={`${item.name}'s portrait`} />
                                         <div className="leading-[1.2] text-[16px] font-bold">{item.name}</div>
-                                        <div className="leading-[1.2] text-[#7A7A7A] text-[16px]">{item.job_title}</div>
+                                        <div className="leading-[1.2] !text-[#7A7A7A] text-[16px]">{item.job_title}</div>
                                         <div className="leading-[1.2] text-[16px] tracking-wide flex-grow overflow-auto">
                                             {item.content}
                                         </div>

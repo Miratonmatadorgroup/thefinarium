@@ -49,7 +49,7 @@ const CrossBorderAndOneAPi = () => {
   return (
     <div className='w-full'>
       <div className="w-11/12 mx-auto">
-        <div className="flex items-center flex-col lg:flex-row mb-32 lg:mb-40 gap-16 justify-between">
+        <div className="flex items-center flex-col text-[var(--color-dark)] lg:flex-row mb-32 lg:mb-40 gap-16 justify-between">
           <div className="w-full md:w-1/2 ">
             <div className="w-full">
               <img src={crossborderimg} alt="cross border image" className='lg:h-[590px] h-[392px] ' />
@@ -73,7 +73,7 @@ const CrossBorderAndOneAPi = () => {
           </div>
         </div>
 
-        <div className="flex items-center  flex-col lg:flex-row gap-10 lg:gap-16 justify-between">
+        <div className="flex items-center text-[var(--color-dark)] flex-col lg:flex-row gap-10 lg:gap-16 justify-between">
           <div className="w-full lg:w-1/2">
             <div className="w-full flex lg:items-start items-center flex-col gap-5">
               <RoundOutlineButton text={`Build & Launch`} />

@@ -44,16 +44,16 @@ const HeroSection = () => {
       <div className="w-full z-40 flex items-start flex-col gap-20 lg:gap-32">
         {/* Navbar component */}
         <NavBar />
-        <div className="w-11/12 mx-auto flex-col  lg:flex-row flex z-10 items-center justify-between gap-5 relative">
+        <div className="w-11/12 mx-auto flex-col lg:flex-row flex z-10 items-center justify-between gap-5 relative">
           <div className="flex flex-col lg:w-[50%] w-full  mx-auto mt-8 lg:mt-0 items-start gap-8">
             <div className="w-11/12 mx-auto lg:w-full">
               <div className="w-fit px-3 py-1.5 rounded-full bg-white flex items-center gap-2">
                 <img src={sparkling} alt="sparkling img" />
-                <div className="text-[16px] brightness-100">#1 Top Fintech Banking Excellence</div>
+                <div className="text-[16px] brightness-100  text-[var(--color-dark)]">#1 Top Fintech Banking Excellence</div>
               </div>
             </div>
             <div className="relative md:w-11/12 lg:w-full mx-auto ">
-              <h1 className='font-bold  text-white text-center md:text-start leading-[1.2] text-[36px] md:text-[58px] lg:text-[61px] relative z-20'>
+              <h1 className='font-bold  dark:text-white  text-center md:text-start leading-[1.2] text-[36px] md:text-[58px] lg:text-[61px] relative z-20'>
                 The Future of Finance, Embedded
               </h1>
               <img src={ringimg}

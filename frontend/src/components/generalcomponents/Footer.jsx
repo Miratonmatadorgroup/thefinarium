@@ -20,14 +20,14 @@ const Footer = () => {
     }
 
     try {
-      const response = await fetch('https://formspree.io/f/mdkeklvn', {
+      const response = await fetch('https://formspree.io/f/mblglqor', {
         method: 'POST',
         body: JSON.stringify({ email }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
-
+     console.log(response)
       if (response.ok) {
         SuccessMessage('Thank you for subscribing!');
         setEmail(''); 
@@ -198,7 +198,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-5 bg-white px-5">
+      <div className="py-5 bg-white px-5 text-[var(--color-dark)]">
         <div className="text-center text-sm md:text-base">
           © 2025 Finarium Inc. 180 Grand Avenue, 6th Floor, Oakland, CA 94612 +1 (929) 256-7807
         </div>
