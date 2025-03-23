@@ -8,6 +8,7 @@ import instagram from '../../assets/images/instagram.png';
 import xline from '../../assets/images/x-line.png';
 import linkedin from '../../assets/images/linkedin.png';
 import { ErrorMessage, SuccessMessage } from '../../utils/pageUtilis';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -54,7 +55,7 @@ const Footer = () => {
     {
       logo: globe,
       title: 'thefinarium.com',
-      url: '/',
+      url: 'https://thefinarium.com/',
     },
   ];
 
@@ -123,6 +124,7 @@ const Footer = () => {
     },
   ];
 
+  
   return (
     <div className="w-full overflow-hidden">
       <div className="w-full pt-20 lg:pb-40 pb-10 bg-[#000000] text-white">
@@ -135,7 +137,7 @@ const Footer = () => {
                 {links.map((item, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <img src={item.logo} alt={`${item.title} image`} />
-                    <div className={`${item.url ? 'cursor-pointer' : ''}`}>{item.title}</div>
+                    <Link target='blank' to={item.url && item.url} className={`${item.url ? 'cursor-pointer' : ''}`}>{item.title}</Link>
                   </div>
                 ))}
               </div>
