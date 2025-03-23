@@ -123,34 +123,35 @@ const CrossBorderAndOneAPi = () => {
 
             <div className="absolute inset-0 flex items-center justify-center w-full">
               <div className="relative w-[300px] h-[300px]">
-                <img src={topimg} alt="line top image" className="absolute top-10 left-24 transform -translate-x-1/2 animate-pulse" />
-                <img src={rightimg} alt="line right image" className="absolute -right-6 top-[6.2rem]" />
+                <img src={topimg} alt="line top image" className="absolute top-10 left-28 lg:left-24 transform -translate-x-1/2 animate-pulse" />
+                <img src={rightimg} alt="line right image" 
+                className="absolute -right-5 md:-right-6 lg:top-[6.2rem] top-[6rem]" />
                 <img src={bottomimg} alt="line bottom image" className="absolute bottom-0 right-5 transform -translate-x-1/2 animate-pulse" />
-                <img src={leftimg} alt="line left image" className="absolute -left-10 top-32" />
+                <img src={leftimg} alt="line left image" className="absolute -left-8 lg:-left-10 top-32" />
 
                 {/* Country Images with Refs */}
                 <img
                   src={usaimg}
                   alt="usa image"
-                  className="absolute country-flag top-15 -left-18"
+                  className="absolute country-flag top-17 lg:top-15 w-2/3 lg:w-fit -left-16 lg:-left-18"
                   ref={usaRef}
                 />
                 <img
                   src={canadaimg}
                   alt="canada image"
-                  className="absolute country-flag -right-24 top-8"
+                  className="absolute country-flag w-2/3 lg:w-fit -right-15 lg:-right-24 top-8"
                   ref={canadaRef}
                 />
                 <img
                   src={nijaimg}
                   alt="nija image"
-                  className="absolute country-flag -right-[7.5rem] bottom-10"
+                  className="absolute country-flag w-2/3 lg:w-fit -right-[4rem] lg:-right-[7.5rem] bottom-14 md:bottom-10"
                   ref={nigeriaRef}
                 />
                 <img
                   src={ukayimg}
                   alt="uk image"
-                  className="absolute country-flag -bottom-10 left-2"
+                  className="absolute country-flag w-2/3 lg:w-fit -bottom-10 left-2"
                   ref={ukRef}
                 />
               </div>
