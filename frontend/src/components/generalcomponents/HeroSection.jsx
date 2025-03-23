@@ -47,7 +47,7 @@ const HeroSection = () => {
         <div className="w-11/12 mx-auto flex-col lg:flex-row flex z-10 items-center justify-between gap-5 relative">
           <div className="flex flex-col lg:w-[50%] w-full  mx-auto mt-8 lg:mt-0 items-start gap-8">
             <div className="w-11/12 mx-auto lg:w-full">
-              <div className="w-fit px-3 py-1.5 rounded-full bg-white flex items-center gap-2 shiny-shadow">
+              <div className="w-fit px-3 py-1.5 rounded-full bg-white flex items-center gap-2 ">
                 <img src={sparkling} alt="sparkling img" />
                 <div className="text-[16px] brightness-100  text-[var(--color-dark)]">
                   #1 Top Fintech Banking Excellence
@@ -70,11 +70,11 @@ const HeroSection = () => {
                 <div className="text-white text-[16px]  w-3/4">Trusted by top 1% emerging market remittance companies</div>
               </div>
               <div className="flex items-center flex-col md:flex-row gap-4 cursor-pointer">
-                <div className="w-fit py-2 px-3 hover:scale-105 transition duration-500 md:py-3 lg:px-4 flex gap-2 bg-[#262626] rounded-full">
+                <div className="w-fit py-2 px-3 hover:scale-105 transition duration-500 md:py-3.5 lg:px-4 flex gap-2 bg-[#262626] rounded-full">
                   <img src={demoimg} alt="demo vector" />
                   <div className="text-white ">Try Live Demo</div>
                 </div>
-                <div className="w-fit pl-5 hover:scale-105 transition duration-500 pr cursor-pointer flex gap-2 items-center bg-transparent border border-[#262626] rounded-full">
+                <div className="w-fit pl-5 hover:scale-105 transition duration-500 cursor-pointer flex gap-2 items-center bg-transparent border border-[#262626] rounded-full">
                   <div className="font-semibold ">Get Started</div>
                   <img src={arrowimg} alt="arrow vector" className='pr-1 xl:py-2 py-0.5 w-10' />
                 </div>
