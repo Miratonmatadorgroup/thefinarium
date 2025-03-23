@@ -12,13 +12,16 @@ import { ErrorMessage, SuccessMessage } from '../../utils/pageUtilis';
 const Footer = () => {
   const [email, setEmail] = useState('');
 
+  function validateEmail(email) {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  }
 
   const handleSubscribe = async () => {
-    if (!email) {
+    if (!email || !validateEmail(email)) {
       ErrorMessage('Please enter a valid email address.');
-      return;
+      return setEmail('');
     }
-
     try {
       const response = await fetch('https://formspree.io/f/mblglqor', {
         method: 'POST',
@@ -27,7 +30,6 @@ const Footer = () => {
           'Content-Type': 'application/json',
         },
       });
-     console.log(response)
       if (response.ok) {
         SuccessMessage('Thank you for subscribing!');
         setEmail(''); 
@@ -164,7 +166,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex items-start flex-col gap-8 w-10/12 md:w-full">
+              <div className="flex items-start flex-col gap-8 w-11/12 md:w-full">
                 <div className="text-[16px] font-bold">NewsLetter</div>
                 <div className="w-full bg-white text-black px-3 py-1.5 border rounded-full flex items-center gap-3">
                   <input
