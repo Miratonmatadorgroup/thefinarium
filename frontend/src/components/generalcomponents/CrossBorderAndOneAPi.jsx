@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import crossborderimg from '../../assets/images/crossborder.png'
 import codesimg from '../../assets/images/codes.png'
 import mobilecodesimg from '../../assets/mobile/codes-mobile.png'
 import checkboximg from '../../assets/images/checkbox.png'
+import mapimg from '../../assets/images/map.png'
+import topimg from '../../assets/images/line-curve-top.png'
+import bottomimg from '../../assets/images/line-curve-bottom.png'
+import rightimg from '../../assets/images/line-curve-right.png'
+import leftimg from '../../assets/images/line-curve-left.png'
+import nijaimg from '../../assets/images/nija.png'
+import usaimg from '../../assets/images/usaimg.png'
+import ukayimg from '../../assets/images/ukay.png'
+import canadaimg from '../../assets/images/canada.png'
 import RoundOutlineButton from './RoundOutlineButton'
 import RoundArrowButton from './RoundArrowButton'
+import anime from "animejs";
+import { useInView } from "react-intersection-observer";
 
 const CrossBorderAndOneAPi = () => {
   const lead = `leading-[1.2]`
@@ -46,13 +57,103 @@ const CrossBorderAndOneAPi = () => {
       desc: '→ Offer loans, BNPL, and credit products'
     },
   ]
+
+  const usaRef = useRef(null);
+  const canadaRef = useRef(null);
+  const nigeriaRef = useRef(null);
+  const ukRef = useRef(null);
+
+  const { ref: containerRef, inView } = useInView({
+    triggerOnce: true, // Trigger animation only once
+    threshold: 0.5, // Trigger when 50% of the element is visible
+  });
+
+  useEffect(() => {
+    if (inView) {
+      // Shake animation for USA image
+      anime({
+        targets: usaRef.current,
+        translateY: [-5, 5],
+        duration: 1000,
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutSine",
+      });
+
+      anime({
+        targets: canadaRef.current,
+        translateX: [-5, 5],
+        duration: 1000,
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutSine",
+        delay: 200, 
+      });
+
+      anime({
+        targets: nigeriaRef.current,
+        translateY: [-5, 5],
+        duration: 1000,
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutSine",
+        delay: 400, 
+      });
+
+      anime({
+        targets: ukRef.current,
+        translateX: [-5, 5],
+        duration: 1000,
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutSine",
+        delay: 600, 
+      });
+    }
+  }, [inView]);
   return (
     <div className='w-full'>
       <div className="w-11/12 mx-auto">
         <div className="flex items-center flex-col text-[var(--color-dark)] lg:flex-row mb-32 lg:mb-40 gap-16 justify-between">
-          <div className="w-full md:w-1/2 ">
-            <div className="w-full">
-              <img src={crossborderimg} alt="cross border image" className='lg:h-[590px] h-[392px] ' />
+          <div className="w-full md:w-1/2 h-[392px] lg:h-[590px] relative" ref={containerRef}>
+            <div
+              style={{ backgroundImage: `url(${mapimg})` }}
+              className="absolute inset-0 bg-cover bg-center bg-[#fcfcfc] rounded-4xl z-0"
+            ></div>
+
+            <div className="absolute inset-0 flex items-center justify-center w-full">
+              <div className="relative w-[300px] h-[300px]">
+                <img src={topimg} alt="line top image" className="absolute top-10 left-24 transform -translate-x-1/2 animate-pulse" />
+                <img src={rightimg} alt="line right image" className="absolute -right-6 top-[6.2rem]" />
+                <img src={bottomimg} alt="line bottom image" className="absolute bottom-0 right-5 transform -translate-x-1/2 animate-pulse" />
+                <img src={leftimg} alt="line left image" className="absolute -left-10 top-32" />
+
+                {/* Country Images with Refs */}
+                <img
+                  src={usaimg}
+                  alt="usa image"
+                  className="absolute country-flag top-15 -left-18"
+                  ref={usaRef}
+                />
+                <img
+                  src={canadaimg}
+                  alt="canada image"
+                  className="absolute country-flag -right-24 top-8"
+                  ref={canadaRef}
+                />
+                <img
+                  src={nijaimg}
+                  alt="nija image"
+                  className="absolute country-flag -right-[7.5rem] bottom-10"
+                  ref={nigeriaRef}
+                />
+                <img
+                  src={ukayimg}
+                  alt="uk image"
+                  className="absolute country-flag -bottom-10 left-2"
+                  ref={ukRef}
+                />
+              </div>
             </div>
           </div>
           <div className="w-full lg:w-1/2 ">

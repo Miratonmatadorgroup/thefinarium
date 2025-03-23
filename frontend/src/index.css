@@ -122,23 +122,12 @@ body {
   z-index: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.shiny-shadow {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 
+              0 0 30px rgba(255, 255, 255, 0.6), 
+              0 0 45px rgba(255, 255, 255, 0.4); 
+  filter: brightness(1); 
+}
 
 
 
@@ -163,7 +152,6 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-
     z-index: 1;
   }
   .orangebg {
@@ -182,16 +170,28 @@ body {
 /* Desktop */
 @media (min-width: 1024px) {
   .rectbg {
-    max-width: 1650px;
-    width: 1350px;
+    max-width: 1350px;
+    /* border: 3px solid red; */
+    width: 1650px;
+    overflow: hidden;
     height: 880px;
   }
 }
 
+
 /* Large Desktop */
 @media (min-width: 1440px) {
+ 
   .rectbg {
-    max-width: 1400px;
-    height: 1100px;
+    max-width: 1220px;
+    height: 1400px;
+    overflow: hidden;
+
+  }
+  .darkbg{
+    min-width: 1800px;
+  }
+  .orangebg{
+    min-width: 1800px;
   }
 }

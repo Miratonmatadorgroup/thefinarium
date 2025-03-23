@@ -75,8 +75,8 @@ const WhoWeHelp = () => {
                     <div className="w-full relative h-full flex items-center justify-center">
                         <div className="w-11/12  mx-auto text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             <div className="flex items-center gap-1 flex-col ">
-                                <div className={`${lead}  text-[45px] font-bold`}>$<Counter endValue={1} /> <span> Million</span></div>
-                                <div className="text-[16px] font-thin w-8/12 text-center">Powering Over $1 Million in Transactions Annually</div>
+                                <div className={`${lead}  text-[45px] font-bold`}>$<Counter endValue={13} /> <span> Million</span></div>
+                                <div className="text-[16px] font-thin w-8/12 text-center">Powered over $13 Million Year till date</div>
                             </div>
                             <div className="flex items-center gap-1 flex-col">
                                 <div className={`${lead} text-[45px] font-bold`}><Counter endValue={99.99} /> %</div>

@@ -97,7 +97,7 @@ const NavBar = () => {
         className="w-full h-fit pt-5 pb-20 fixed z-50 overflow-hidden bg-[#f6f6f6] px-2"
         style={{ display: 'none', transform: 'translateY(-100%)' }}
       >
-        <div className="mt-5 w-11/12 mx-auto h-full flex items-center flex-col gap-10">
+        <div className="mt-5 w-11/12 mx-auto h-full text-[var(--color-dark)] flex items-center flex-col gap-10">
           <div className="flex items-center w-full justify-between">
             <div className="">
               <img src={logo2} className='lg:w-fit cursor-pointer  w-[250px]' alt="finarium logo" />

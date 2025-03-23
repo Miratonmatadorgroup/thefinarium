@@ -51,7 +51,7 @@ const Footer = () => {
     },
     {
       logo: globe,
-      title: 'finarium.com',
+      title: 'thefinarium.com',
       url: '/',
     },
   ];
