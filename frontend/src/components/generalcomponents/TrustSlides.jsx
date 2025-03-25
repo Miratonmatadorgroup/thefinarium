@@ -19,7 +19,7 @@ const TrustSlides = () => {
 
     return (
 
-        <div className="mt-20 mb-10 md:mt-[10rem] lg:-mt-8 w-11/12  border  mx-auto px-5 ">
+        <div className="mt-20 mb-10 md:mt-[10rem] lg:-mt-8 w-11/12    mx-auto px-5 ">
             <div className="w-full flex flex-col lg:flex-row items-center justify-between">
                 <div className="font-semibold text-[16px] w-full text-[var(--color-dark)] lg:w-1/4 mb-4 md:mb-0">
                     Trusted By Over 25k+ Companies and Businesses Across the Globe.

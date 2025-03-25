@@ -70,13 +70,13 @@ const HeroSection = () => {
                 <div className="text-white text-[16px]  w-3/4">Trusted by top 1% emerging market remittance companies</div>
               </div>
               <div className="flex items-center flex-col md:flex-row gap-4 cursor-pointer">
-                <div className="w-fit py-2 px-3 hover:scale-105 transition duration-500 md:py-3.5 lg:px-4 flex gap-2 bg-[#262626] rounded-full">
+                <div className="w-fit py-2 px-3 hover:scale-105 transition duration-500 md:py-2.5 lg:px-4 flex gap-2 bg-[#262626] rounded-full">
                   <img src={demoimg} alt="demo vector" />
                   <div className="text-white ">Try Live Demo</div>
                 </div>
-                <div className="w-fit pl-5 hover:scale-105 transition duration-500 cursor-pointer flex gap-2 items-center bg-transparent border border-[#262626] rounded-full">
+                <div className="w-fit pl-5 py-0.3 hover:scale-105 transition duration-500 cursor-pointer flex gap-2 items-center bg-transparent border border-[#262626] rounded-full">
                   <div className="font-semibold ">Get Started</div>
-                  <img src={arrowimg} alt="arrow vector" className='pr-1 xl:py-2 py-0.5 w-10' />
+                  <img src={arrowimg} alt="arrow vector" className='pr-1  py-0.5 w-10' />
                 </div>
               </div>
             </div>
