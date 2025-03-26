@@ -128,7 +128,7 @@ const Testimonials = () => {
                                 <img src={demoimg} alt="Demo Vector" className='w-5' />
                                 <div className="text-white text-[13px] md:text-[16px]">Request a Demo</div>
                             </div>
-                            <div className="w-1/2 md:w-1/3 lg:w-1/4 cursor-pointer flex  items-center justify-between gap-3 pl-3 py-0.5 lg:py-1 rounded-full border  border-[#cc5802] hover:scale-105 transition duration-500">
+                            <div className="w-1/2 md:w-1/3 lg:w-1/4 cursor-pointer flex  items-center justify-between gap-3 pl-3 py-1 rounded-full border  border-[#cc5802] hover:scale-105 transition duration-500">
                                 <div className={`text-[#cc5802] text-[13px] md:text-[16px] `}>Open an Account</div>
                                 <div className="md:p-3 p-2 rounded-full bg-[#cc5802] mr-0.5">
                                     <IoArrowForwardSharp className={`text-white`} />
