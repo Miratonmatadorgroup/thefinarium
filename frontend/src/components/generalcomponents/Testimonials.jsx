@@ -10,7 +10,6 @@ import solar_star from '../../assets/images/solar_star.png';
 import demoimg from '../../assets/images/demo.png'
 import solar_star_dark from '../../assets/images/solar_star-dark.png';
 import trustimg from '../../assets/images/trust.png'
-import RoundArrowButton from './RoundArrowButton';
 import { IoArrowForwardSharp } from 'react-icons/io5';
 
 const Testimonials = () => {

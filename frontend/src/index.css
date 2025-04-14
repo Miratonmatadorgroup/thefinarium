@@ -32,7 +32,7 @@
 }
 @font-face {
   font-family: 'Urbanist';
-  src: url('utils//fonts/Urbanist-VariableFont_wght.ttf') format('truetype'),
+  src: url('utils/fonts/Urbanist-VariableFont_wght.ttf') format('truetype'),
        url('utils/fonts/Urbanist-Italic-VariableFont_wght.ttf') format('truetype'),
        url('utils/fonts/Urbanist-Bold.ttf') format('truetype'),
        url('utils/fonts/Urbanist-Black.ttf') format('truetype'),
