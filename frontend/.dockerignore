@@ -1,0 +1,25 @@
+# See https://docs.docker.com/engine/reference/dockerfile/#dockerignore-file
+
+# General files and directories
+node_modules/
+dist/
+build/
+.env
+.git/
+.idea/
+.vscode/
+*.log
+tmp/
+temp/
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# Yarn specific
+yarn-error.log
+
+# npm specific
+package-lock.json
+
+README.md
+LICENSE
